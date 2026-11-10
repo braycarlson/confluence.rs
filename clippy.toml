@@ -1,0 +1,14 @@
+allow-expect-in-tests = true
+allow-indexing-slicing-in-tests = true
+allow-panic-in-tests = true
+allow-print-in-tests = true
+allow-renamed-params-for = ["..", "core::fmt::Debug", "core::fmt::Display", "std::io::Seek", "std::io::Write"]
+allow-unwrap-in-tests = true
+allowed-idents-below-min-chars = []
+avoid-breaking-exported-api = false
+excessive-nesting-threshold = 4
+max-fn-params-bools = 0
+module-items-ordered-within-groupings = ["lower_snake_case"]
+struct-field-name-threshold = 4096
+too-many-arguments-threshold = 7
+too-many-lines-threshold = 70

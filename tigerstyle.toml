@@ -1,0 +1,40 @@
+preview = true
+select = ["ALL"]
+ignore = ["TS016"]
+parameter_exempt_types = [
+    "Fault",
+    "Field<Schema, Member>",
+    "Fields<'_>",
+    "http::Request<Payload>",
+    "i64",
+    "Neighbours",
+    "Network",
+    "NextTimeout",
+    "Option<&'document Value>",
+    "Option<&[(&str, &str)]>",
+    "Option<&[&str]>",
+    "Option<&[i64]>",
+    "Option<&str>",
+    "Option<()>",
+    "Option<bool>",
+    "Option<i64>",
+    "Over",
+    "ParameterKind",
+    "Payload",
+    "Resolving",
+    "Result<Page<Text>, Error>",
+    "Scene",
+    "Seed",
+    "Spot<'_>",
+    "Spot<'document>",
+    "TcpStream",
+    "u8",
+    "Value",
+    "Vec<u8>",
+    "Walked::Options<'call>",
+]
+
+[per-file-ignores]
+"src/size.rs" = ["TS027"]
+"src/wire.rs" = ["TS041"]
+"xtask/src/task.rs" = ["TS035"]

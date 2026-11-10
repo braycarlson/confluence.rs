@@ -1,0 +1,29 @@
+#[derive(Clone, Copy, Debug)]
+pub struct AsyncContentBody;
+
+impl AsyncContentBody {
+    pub const CONTENT: crate::Field<Self, crate::Any> = crate::Field::new("content");
+
+    pub const EMBEDDED_CONTENT: crate::Field<
+        Self,
+        crate::List<crate::Object<super::EmbeddedContent>>,
+    > = crate::Field::new("embeddedContent");
+
+    pub const ERROR: crate::Field<Self, crate::Text> = crate::Field::new("error");
+
+    pub const EXPANDABLE: crate::Field<Self, crate::Object<super::AsyncContentBodyExpandable>> =
+        crate::Field::new("_expandable");
+
+    pub const LINKS: crate::Field<Self, crate::Map<crate::Any>> = crate::Field::new("_links");
+
+    pub const MEDIA_TOKEN: crate::Field<Self, crate::Object<super::AsyncContentBodyMediaToken>> =
+        crate::Field::new("mediaToken");
+
+    pub const RENDER_TASK_ID: crate::Field<Self, crate::Text> = crate::Field::new("renderTaskId");
+    pub const REPRESENTATION: crate::Field<Self, crate::Text> = crate::Field::new("representation");
+    pub const STATUS: crate::Field<Self, crate::Text> = crate::Field::new("status");
+    pub const VALUE: crate::Field<Self, crate::Text> = crate::Field::new("value");
+
+    pub const WEBRESOURCE: crate::Field<Self, crate::Object<super::WebResourceDependencies>> =
+        crate::Field::new("webresource");
+}

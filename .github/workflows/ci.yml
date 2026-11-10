@@ -1,0 +1,36 @@
+name: ci
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+permissions:
+    contents: read
+
+env:
+    CARGO_TERM_COLOR: always
+
+jobs:
+    ci:
+        strategy:
+            fail-fast: false
+            matrix:
+                os: [ubuntu-latest, windows-latest]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - uses: actions/checkout@v7
+
+            - uses: dtolnay/rust-toolchain@nightly
+              with:
+                  components: rustfmt
+
+            - uses: dtolnay/rust-toolchain@stable
+              with:
+                  components: clippy
+
+            - uses: Swatinem/rust-cache@v2
+
+            - name: CI
+              run: cargo xtask ci

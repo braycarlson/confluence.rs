@@ -1,0 +1,13 @@
+edition = "2024"
+ignore = [
+    "src/automation/mod.rs",
+    "src/automation/shape/mod.rs",
+    "src/v1/mod.rs",
+    "src/v1/shape/mod.rs",
+    "src/v2/mod.rs",
+    "src/v2/shape/mod.rs",
+]
+imports_layout = "HorizontalVertical"
+max_width = 100
+short_array_element_width_threshold = 0
+use_small_heuristics = "Max"
